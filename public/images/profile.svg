@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="230" height="264" viewBox="0 0 230 264" role="img" aria-label="Portrait placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="230" height="264" rx="40" fill="url(#bg)"/>
+  <circle cx="115" cy="104" r="46" fill="#ffffff" opacity="0.92"/>
+  <path d="M42 236c0-42 33-70 73-70s73 28 73 70v10H42z" fill="#ffffff" opacity="0.92"/>
+  <text x="115" y="118" text-anchor="middle" font-family="Inter, sans-serif" font-size="44" font-weight="700" fill="#1e3a8a">AG</text>
+</svg>
