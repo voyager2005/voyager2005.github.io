@@ -21,6 +21,7 @@ export default function TypingText({
     setDone(false)
     indexRef.current = 0
 
+    let timer;
     const start = setTimeout(function tick() {
       indexRef.current += 1
       setShown(text.slice(0, indexRef.current))
@@ -31,7 +32,7 @@ export default function TypingText({
       timer = setTimeout(tick, speed)
     }, startDelay)
 
-    let timer = start
+    timer = start
     return () => clearTimeout(timer)
   }, [text, speed, startDelay, prefersReducedMotion])
 
