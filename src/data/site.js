@@ -24,9 +24,8 @@ export const socialLinks = [
 ]
 
 export const bio = [
-  'I am a Computer Science student and AI Research Intern at <a href="https://www.shell.in" target="_blank" rel="noopener noreferrer">Shell R&D</a>. I am currently pursuing a <a href="https://www.manipal.edu/mit-bengaluru/programs/program-list/b-tech/computer-science-and-engineering.html" target="_blank" rel="noopener noreferrer">B.Tech (Honours)</a> in Computer Science and Engineering with a specialization in Artificial Intelligence and a Minor in AI for Healthcare at the Manipal Institute of Technology, Bengaluru.',
-  'My research interests lie at the intersection of computer vision, representation learning, and data-efficient/data-centric AI. I am motivated by a fundamental question: how can we build useful structural priors directly into a model rather than expecting it to discover everything from raw data alone? This focus has guided my work on self-supervised representation pretraining using Denoising Diffusion Probabilistic Models (DDPMs) and constructing structurally-consistent hierarchical multi-label vision architectures (HiME).',
-  'I don\'t see myself as only a researcher; I want to understand AI closely enough to improve it and build systems that actual people can depend on. From co-founding Sensera to engineer a production-grade serverless MedTech pipeline, to debugging go-kart autonomous navigation systems at 2 a.m. in the MAVRO laboratory, I believe a technology\'s value lies entirely in whether the person on the other end of it is better off. I want to contribute to the next generation of AI tools, not just as a skilled user, but as one of the people building them.',
+  'I am a Computer Science Honours student at <a href="https://www.manipal.edu/mit-bengaluru/programs/program-list/b-tech/computer-science-and-engineering.html" target="_blank" rel="noopener noreferrer">Manipal Institute of Technology</a> specializing in AI with a Minor in AI for Healthcare, and an AI Research Intern at <a href="https://www.shell.in" target="_blank" rel="noopener noreferrer">Shell R&D</a>.',
+  'My research interests focus on computer vision and data-efficient, data-centric machine learning—specifically representation pretraining (DDPMs) and structural constraints in hierarchical vision models (HiME).',
 ]
 
 export const experience = [

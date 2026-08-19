@@ -20,6 +20,9 @@ export default function App() {
     if (window.location.pathname.includes('blog') || window.location.hash.includes('blog')) {
       return 'blog'
     }
+    if (window.location.pathname.includes('experience') || window.location.hash.includes('experience')) {
+      return 'experience'
+    }
     return 'home'
   })
 
@@ -27,8 +30,10 @@ export default function App() {
     setCurrentTab(tab)
     if (tab === 'home') {
       window.history.pushState({}, '', '/')
-    } else {
+    } else if (tab === 'blog') {
       window.history.pushState({}, '', '/blog.html')
+    } else if (tab === 'experience') {
+      window.history.pushState({}, '', '/experience.html')
     }
   }
 
@@ -80,7 +85,7 @@ export default function App() {
                 ))}
                 <p style={{ marginTop: '1.25rem', fontSize: '0.85rem' }}>
                   <button 
-                    onClick={() => handleTabChange('blog')} 
+                    onClick={() => handleTabChange('experience')} 
                     style={{ 
                       background: 'none', 
                       border: 'none', 
@@ -92,7 +97,7 @@ export default function App() {
                       textDecoration: 'underline'
                     }}
                   >
-                    see my research experience →
+                    see my work experience →
                   </button>
                 </p>
               </div>
@@ -205,40 +210,9 @@ export default function App() {
               </div>
             </section>
           </>
-        ) : (
+        ) : currentTab === 'blog' ? (
           <>
-            <section className="section" id="experience" style={{ marginTop: '1.5rem' }}>
-              <h2 className="section-heading">experience</h2>
-              <div className="experience-list">
-                {experience.map((job, idx) => (
-                  <article className="experience-card" key={idx}>
-                    {job.logo && (
-                      <div className="experience-logo-wrap">
-                        <img className="experience-logo" src={job.logo} alt={job.org} />
-                      </div>
-                    )}
-                    <div className="experience-body">
-                      <div className="entry-head">
-                        <div>
-                          <p className="entry-role">{job.role}</p>
-                          <p className="entry-org">
-                            {job.org} <span className="entry-loc">· {job.location}</span>
-                          </p>
-                        </div>
-                        <p className="entry-period">{job.period}</p>
-                      </div>
-                      <ul className="plain-list" style={{ marginTop: '0.5rem' }}>
-                        {job.points.map((point, i) => (
-                          <li key={i}>{point}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-
-            <section className="section" id="writing">
+            <section className="section" id="writing" style={{ marginTop: '1.5rem' }}>
               <h2 className="section-heading">writing</h2>
               <p className="section-blurb">
                 Introductory articles and tutorials on machine learning and computer vision.
@@ -291,6 +265,39 @@ export default function App() {
                       <p className="paper-links">
                         <a href={proj.githubUrl} target="_blank" rel="noopener noreferrer">[GitHub Repository]</a>
                       </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          </>
+        ) : (
+          <>
+            <section className="section" id="experience" style={{ marginTop: '1.5rem' }}>
+              <h2 className="section-heading">experience</h2>
+              <div className="experience-list">
+                {experience.map((job, idx) => (
+                  <article className="experience-card" key={idx}>
+                    {job.logo && (
+                      <div className="experience-logo-wrap">
+                        <img className="experience-logo" src={job.logo} alt={job.org} />
+                      </div>
+                    )}
+                    <div className="experience-body">
+                      <div className="entry-head">
+                        <div>
+                          <p className="entry-role">{job.role}</p>
+                          <p className="entry-org">
+                            {job.org} <span className="entry-loc">· {job.location}</span>
+                          </p>
+                        </div>
+                        <p className="entry-period">{job.period}</p>
+                      </div>
+                      <ul className="plain-list" style={{ marginTop: '0.5rem' }}>
+                        {job.points.map((point, i) => (
+                          <li key={i}>{point}</li>
+                        ))}
+                      </ul>
                     </div>
                   </article>
                 ))}

@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         blog: resolve(__dirname, 'blog.html'),
+        experience: resolve(__dirname, 'experience.html'),
       },
     },
   },
