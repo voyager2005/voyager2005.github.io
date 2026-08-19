@@ -81,34 +81,43 @@ export default function App() {
 
         <section className="section" id="publications">
           <h2 className="section-heading">publications</h2>
-          <div className="entry-list">
+          <div className="paper-list">
             {publications.map((pub, idx) => (
-              <article className="entry" key={idx}>
-                <div className="entry-head">
-                  <p className="entry-role">{pub.title}</p>
+              <article className="paper-card" key={idx}>
+                <div className="paper-thumb-wrap">
+                  <img className="paper-thumb" src={pub.thumb} alt={pub.title} loading="lazy" />
                 </div>
-                <p className="pub-authors">
-                  {pub.authors.split('G. Akshat').map((part, i, arr) => (
-                    <span key={i}>
-                      {part}
-                      {i < arr.length - 1 && <strong>G. Akshat</strong>}
-                    </span>
-                  ))}
-                </p>
-                <p className="pub-venue">
-                  <em>{pub.venue}</em>
-                </p>
-                {pub.doi && (
-                  <div className="pub-links">
-                    <a href={pub.doi} target="_blank" rel="noopener noreferrer" className="pub-link-badge">
-                      [DOI]
-                    </a>
-                  </div>
-                )}
+                <div className="paper-body">
+                  <span className="paper-title">{pub.title}</span>
+                  <p className="paper-authors">
+                    {pub.authors.split('G. Akshat').map((part, i, arr) => (
+                      <span key={i}>
+                        {part}
+                        {i < arr.length - 1 && <strong>G. Akshat</strong>}
+                      </span>
+                    ))}
+                  </p>
+                  <p className="paper-venue">
+                    <em>{pub.venue}</em>
+                  </p>
+                  {pub.links && pub.links.length > 0 && (
+                    <p className="paper-links">
+                      {pub.links.map((link, lIdx) => (
+                        <span key={lIdx}>
+                          <a href={link.href} target="_blank" rel="noopener noreferrer">
+                            {link.label}
+                          </a>
+                          {lIdx < pub.links.length - 1 ? ' / ' : ''}
+                        </span>
+                      ))}
+                    </p>
+                  )}
+                  {pub.blurb && <p className="paper-blurb">{pub.blurb}</p>}
+                </div>
               </article>
             ))}
           </div>
-          <p className="section-more">
+          <p className="section-more" style={{ marginTop: '2rem' }}>
             <a href={publicationsConfig.scholarUrl} target="_blank" rel="noopener noreferrer">
               see all on Google Scholar →
             </a>

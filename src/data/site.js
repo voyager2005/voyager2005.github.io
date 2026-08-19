@@ -104,39 +104,61 @@ export const publicationsConfig = {
 export const publications = [
   {
     title: 'Binary Classification of Galaxies Using Machine Learning and Deep Learning',
+    thumb: './images/publications/galaxies.svg',
     authors: 'N. Mishra, G. Akshat, U. Moorthy, V. E. Sathishkumar',
     venue: 'Data Science and Exploration in Artificial Intelligence (CODE-AI 2025), Springer CCIS, 2026, pp. 88–98',
-    doi: 'https://doi.org/10.1007/978-3-032-19318-6_9',
+    blurb: 'We evaluate different machine learning and deep learning architectures to improve classification accuracy for galaxy morphology.',
+    links: [
+      { label: 'DOI', href: 'https://doi.org/10.1007/978-3-032-19318-6_9' }
+    ],
   },
   {
     title: 'Nucleus Segmentation in H&E-Stained Histopathology Images',
+    thumb: './images/publications/nucleus.svg',
     authors: 'G. Akshat, T. K. Misra',
     venue: 'SAGE Digital Health, 2025 (Accepted, awaiting publication)',
+    blurb: 'We present a comparative analysis of deep learning architectures on the MoNuSeg dataset, achieving competitive results for nuclear segmentation in clinical tissue samples.',
+    links: [],
   },
   {
     title: 'Unsupervised Anatomical Feature Learning via Denoising Diffusion Probabilistic Models',
+    thumb: './images/publications/diffusion.svg',
     authors: 'G. Akshat, S. Bhatnagar, S. Ankalaki, T. K. Misra',
     venue: 'Submitted to IEEE Access (Under peer review at IEEE Transactions on Medical Imaging)',
+    blurb: 'We propose using DDPM pretraining on unlabeled abdominal CT scans (BTCV dataset) to learn robust anatomical priors, showing that diffusion encoders retain over 80% of fully-supervised performance with only 10% of labels.',
+    links: [],
   },
   {
     title: 'Quality-Controlled Synthetic Medical Data Generation',
+    thumb: './images/publications/synthetic_gan.svg',
     authors: 'G. Akshat, R. R',
     venue: 'Honors Thesis, Submitted, 2026',
+    blurb: 'We develop a Teacher-Student semi-supervised framework using conditional GANs to synthesize high-quality lumbar spine MRI slices while filtering out synthetic noise through a novel quality assessment metric.',
+    links: [],
   },
   {
     title: 'Semi-Supervised Learning on Constrained Datasets',
+    thumb: './images/publications/semi_supervised.svg',
     authors: 'G. Akshat, R. R, G. Surathkal',
     venue: 'Submitted, 2025',
+    blurb: 'We design an adaptive confidence-thresholding strategy based on pixel-wise uncertainty to stabilize attention U-Net training under extreme label scarcity (50 labeled samples).',
+    links: [],
   },
   {
     title: 'Data-Centric Polyp Segmentation for Colorectal Cancer Detection',
+    thumb: './images/publications/polyp_seg.svg',
     authors: 'G. Akshat, R. R',
     venue: 'Submitted, 2025',
+    blurb: 'We engineer a data-centric preprocessing pipeline with enhanced ground-truth labels and a deep learning model for polyp segmentation, achieving a Dice score of 0.9525.',
+    links: [],
   },
   {
     title: 'Segmenting Lung Regions for TB Detection',
+    thumb: './images/publications/lung_seg.svg',
     authors: 'G. Akshat, R. R',
     venue: 'Presented at CVIP 2025; awaiting publication',
+    blurb: 'We evaluate advanced U-Net variants for region-of-interest lung segmentation in chest X-rays, optimizing hyperparameters to achieve a Mean Dice score of 0.95.',
+    links: [],
   },
 ]
 

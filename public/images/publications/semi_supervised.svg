@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="110" viewBox="0 0 160 110">
+  <defs>
+    <linearGradient id="g5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="110" fill="#f5f2ed"/>
+  <rect x="5" y="5" width="150" height="100" rx="4" fill="none" stroke="#e3ded8" stroke-width="1"/>
+  <!-- Abstract Semi-supervised / partial labels grid -->
+  <rect x="35" y="30" width="16" height="16" fill="url(#g5)"/>
+  <rect x="59" y="30" width="16" height="16" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="83" y="30" width="16" height="16" fill="url(#g5)"/>
+  <rect x="107" y="30" width="16" height="16" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="2 2"/>
+  
+  <rect x="35" y="54" width="16" height="16" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <rect x="59" y="54" width="16" height="16" fill="url(#g5)"/>
+  <rect x="83" y="54" width="16" height="16" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="107" y="54" width="16" height="16" fill="url(#g5)"/>
+  <text x="12" y="20" font-family="Space Mono, monospace" font-size="9" font-weight="700" fill="#95908d">SEMI-SUPERVISED</text>
+</svg>

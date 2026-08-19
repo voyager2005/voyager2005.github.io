@@ -359,38 +359,115 @@
   }
 }
 
-/* ---------- Academic Publications ---------- */
-.pub-authors {
-  margin: 0.25rem 0 0;
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-.pub-venue {
-  margin: 0.15rem 0 0;
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-.pub-links {
-  margin-top: 0.45rem;
+/* ---------- Academic Publications (JaydenTeoh style) ---------- */
+.paper-list {
   display: flex;
-  gap: 0.6rem;
-  font-size: 0.85rem;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-top: 0.5rem;
 }
 
-.pub-link-badge {
+.paper-card {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.paper-thumb-wrap {
+  width: 160px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 2px 3px 10px rgb(0 0 0 / 10%);
+}
+
+.paper-thumb {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.paper-body {
+  min-width: 0;
+}
+
+.paper-card .paper-title {
+  display: block;
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+  color: var(--link);
+  text-decoration: none;
+}
+
+.paper-card .paper-title:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.paper-authors,
+.paper-venue,
+.paper-links,
+.paper-blurb {
+  margin: 0 0 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.paper-authors {
+  color: var(--text-secondary);
+}
+
+.paper-venue {
+  color: var(--text-muted);
+}
+
+.paper-venue em {
+  font-style: italic;
+}
+
+.paper-links {
+  color: var(--text-muted);
+  font-family: 'Space Mono', monospace;
+}
+
+.paper-links a {
   color: var(--link);
   font-weight: 600;
   text-decoration: none;
-  font-family: 'Space Mono', monospace;
-  font-size: 0.8rem;
 }
 
-.pub-link-badge:hover {
-  color: var(--link-hover);
+.paper-links a:hover {
   text-decoration: underline;
+}
+
+.paper-blurb {
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 580px) {
+  .paper-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .paper-thumb-wrap {
+    width: 100%;
+    max-width: 220px;
+    height: 130px;
+  }
 }
 

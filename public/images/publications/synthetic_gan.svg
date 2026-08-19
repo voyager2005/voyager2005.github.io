@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="110" viewBox="0 0 160 110">
+  <defs>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="110" fill="#f5f2ed"/>
+  <rect x="5" y="5" width="150" height="100" rx="4" fill="none" stroke="#e3ded8" stroke-width="1"/>
+  <!-- Abstract GAN generator/discriminator nodes -->
+  <line x1="30" y1="35" x2="80" y2="55" stroke="#95908d" stroke-width="1" stroke-dasharray="2 2"/>
+  <line x1="30" y1="75" x2="80" y2="55" stroke="#95908d" stroke-width="1" stroke-dasharray="2 2"/>
+  <line x1="80" y1="55" x2="130" y2="55" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="30" cy="35" r="7" fill="url(#g4)"/>
+  <circle cx="30" cy="75" r="7" fill="url(#g4)"/>
+  <circle cx="80" cy="55" r="9" fill="#1d4ed8"/>
+  <circle cx="130" cy="55" r="7" fill="#f5f2ed" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="12" y="20" font-family="Space Mono, monospace" font-size="9" font-weight="700" fill="#95908d">HONORS THESIS</text>
+</svg>
