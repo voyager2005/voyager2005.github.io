@@ -35,7 +35,7 @@ export default function App() {
   return (
     <div className="app-shell">
       <header className="top-bar">
-        <nav className="nav-links" style={{ width: '100%', justifyContent: 'center', gap: '3rem' }}>
+        <nav className="nav-links" style={{ width: '100%', justifyContent: 'flex-end', gap: '3rem' }}>
           <button 
             className={`nav-link ${currentTab === 'home' ? 'nav-link-active' : ''}`} 
             onClick={() => handleTabChange('home')}
@@ -88,52 +88,21 @@ export default function App() {
 
             <section className="section" id="mentors" style={{ marginTop: '1.5rem' }}>
               <h2 className="section-heading">mentors I'm grateful for</h2>
-              <ul className="plain-list">
+              <ul className="plain-list" style={{ paddingLeft: '1.2rem', listStyleType: 'disc' }}>
                 {mentors.map((mentor, idx) => (
-                  <li key={idx} style={{ marginBottom: '1.25rem' }}>
+                  <li key={idx} style={{ marginBottom: '0.75rem', lineHeight: '1.6' }}>
                     <strong>
                       <a href={mentor.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
                         {mentor.name} ({mentor.org})
                       </a>
                     </strong>
-                    <p style={{ margin: '0.35rem 0 0', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-                      {mentor.text}
-                    </p>
+                    <span>: {mentor.text}</span>
                   </li>
                 ))}
               </ul>
             </section>
 
-            <section className="section" id="experience">
-              <h2 className="section-heading">experience</h2>
-              <div className="experience-list">
-                {experience.map((job, idx) => (
-                  <article className="experience-card" key={idx}>
-                    {job.logo && (
-                      <div className="experience-logo-wrap">
-                        <img className="experience-logo" src={job.logo} alt={job.org} />
-                      </div>
-                    )}
-                    <div className="experience-body">
-                      <div className="entry-head">
-                        <div>
-                          <p className="entry-role">{job.role}</p>
-                          <p className="entry-org">
-                            {job.org} <span className="entry-loc">· {job.location}</span>
-                          </p>
-                        </div>
-                        <p className="entry-period">{job.period}</p>
-                      </div>
-                      <ul className="plain-list" style={{ marginTop: '0.5rem' }}>
-                        {job.points.map((point, i) => (
-                          <li key={i}>{point}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </section>
+            {/* Experience section moved below skills */}
 
             <section className="section" id="publications">
               <h2 className="section-heading">publications</h2>
@@ -215,6 +184,37 @@ export default function App() {
                     <div className="skill-tag">{skill.tag}</div>
                     <p className="skill-items">{skill.items}</p>
                   </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="section" id="experience">
+              <h2 className="section-heading">experience</h2>
+              <div className="experience-list">
+                {experience.map((job, idx) => (
+                  <article className="experience-card" key={idx}>
+                    {job.logo && (
+                      <div className="experience-logo-wrap">
+                        <img className="experience-logo" src={job.logo} alt={job.org} />
+                      </div>
+                    )}
+                    <div className="experience-body">
+                      <div className="entry-head">
+                        <div>
+                          <p className="entry-role">{job.role}</p>
+                          <p className="entry-org">
+                            {job.org} <span className="entry-loc">· {job.location}</span>
+                          </p>
+                        </div>
+                        <p className="entry-period">{job.period}</p>
+                      </div>
+                      <ul className="plain-list" style={{ marginTop: '0.5rem' }}>
+                        {job.points.map((point, i) => (
+                          <li key={i}>{point}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </article>
                 ))}
               </div>
             </section>

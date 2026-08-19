@@ -179,19 +179,19 @@ export const mentors = [
     name: 'Vishal Ahuja',
     org: 'Shell Research',
     url: 'https://www.linkedin.com/in/vishal-ahuja-a7090556/',
-    text: '[Placeholder: Add what you are grateful for regarding Vishal Ahuja here...]',
+    text: 'Vishal was my supervisor and project lead at Shell. He trusted me to complete the entire project, end to end, and that trust was what motivated me. I would not have been able to work and learn at Shell, nor design and propose the HiME architecture, if not for his leeway and trust in me to lead the research.',
   },
   {
     name: 'Dr. Rashmi R',
     org: 'Manipal Institute of Technology',
     url: 'https://www.manipal.edu/mu/campuses/mahe-bengaluru/academics/institution-list/mit-blr/department-faculty/faculty-list/dr--rashmi-r.html',
-    text: '[Placeholder: Add what you are grateful for regarding Dr. Rashmi R here...]',
+    text: 'She took me in as an undergraduate research assistant, helped me publish my first paper, and guided me as my B.Tech Project advisor and B.Tech Honors Thesis guide.',
   },
   {
     name: 'Dr. Tusar Kanti Mishra',
     org: 'Manipal Institute of Technology',
     url: 'https://www.manipal.edu/mu/campuses/mahe-bengaluru/academics/institution-list/mit-blr/department-faculty/faculty-list/dr--tusar--kanti--midhra.html',
-    text: '[Placeholder: Add what you are grateful for regarding Dr. Tusar Kanti Mishra here...]',
+    text: 'He helped me publish my first journal paper as my advisor, and I am grateful for his insights in teaching me how to approach academic research.',
   },
 ]
 
