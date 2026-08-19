@@ -416,6 +416,62 @@
   text-underline-offset: 2px;
 }
 
+/* ---------- Experience and Education Grid Cards ---------- */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.experience-card {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.experience-logo-wrap {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 1px 2px 6px rgb(0 0 0 / 6%);
+}
+
+.experience-logo {
+  max-width: 85%;
+  max-height: 85%;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.experience-body {
+  min-width: 0;
+}
+
+@media (max-width: 580px) {
+  .experience-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .experience-logo-wrap {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.paper-card .paper-title:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .paper-authors,
 .paper-venue,
 .paper-links,

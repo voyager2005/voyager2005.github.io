@@ -8,6 +8,9 @@ import {
   publications,
   publicationsConfig,
   education,
+  mentors,
+  writings,
+  projects,
 } from './data/site.js'
 import './App.css'
 
@@ -15,14 +18,12 @@ export default function App() {
   return (
     <div className="app-shell">
       <header className="top-bar">
-        <div className="name-block">
-          <p className="brand">{profile.name}</p>
-        </div>
-        <nav className="nav-links">
+        <nav className="nav-links" style={{ width: '100%', justifyContent: 'center', gap: '2rem' }}>
           <a className="nav-link" href="#experience">experience</a>
-          <a className="nav-link" href="#skills">skills</a>
           <a className="nav-link" href="#publications">publications</a>
           <a className="nav-link" href="#education">education</a>
+          <a className="nav-link" href="#writing">writing</a>
+          <a className="nav-link" href="#projects">projects</a>
         </nav>
       </header>
 
@@ -33,7 +34,7 @@ export default function App() {
               <TypingText text={profile.name} />
             </h1>
             {bio.map((para, i) => (
-              <p key={i}>{para}</p>
+              <p key={i} dangerouslySetInnerHTML={{ __html: para }} />
             ))}
           </div>
 
@@ -45,39 +46,36 @@ export default function App() {
 
         <section className="section" id="experience">
           <h2 className="section-heading">experience</h2>
-          <div className="entry-list">
-            {experience.map((job) => (
-              <article className="entry" key={`${job.org}-${job.role}`}>
-                <div className="entry-head">
-                  <div>
-                    <p className="entry-role">{job.role}</p>
-                    <p className="entry-org">
-                      {job.org} <span className="entry-loc">· {job.location}</span>
-                    </p>
+          <div className="experience-list">
+            {experience.map((job, idx) => (
+              <article className="experience-card" key={idx}>
+                {job.logo && (
+                  <div className="experience-logo-wrap">
+                    <img className="experience-logo" src={job.logo} alt={job.org} />
                   </div>
-                  <p className="entry-period">{job.period}</p>
+                )}
+                <div className="experience-body">
+                  <div className="entry-head">
+                    <div>
+                      <p className="entry-role">{job.role}</p>
+                      <p className="entry-org">
+                        {job.org} <span className="entry-loc">· {job.location}</span>
+                      </p>
+                    </div>
+                    <p className="entry-period">{job.period}</p>
+                  </div>
+                  <ul className="plain-list" style={{ marginTop: '0.5rem' }}>
+                    {job.points.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="plain-list">
-                  {job.points.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="section" id="skills">
-          <h2 className="section-heading">skills</h2>
-          <div className="skill-grid">
-            {skills.map((skill) => (
-              <div className="skill-row" key={skill.tag}>
-                <div className="skill-tag">{skill.tag}</div>
-                <p className="skill-items">{skill.items}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        {/* Skills section moved below education */}
 
         <section className="section" id="publications">
           <h2 className="section-heading">publications</h2>
@@ -126,22 +124,118 @@ export default function App() {
 
         <section className="section" id="education">
           <h2 className="section-heading">education</h2>
-          <article className="entry">
-            <div className="entry-head">
-              <div>
-                <p className="entry-role">{education.degree}</p>
-                <p className="entry-org">
-                  {education.school} <span className="entry-loc">· {education.location}</span>
-                </p>
+          <article className="experience-card">
+            {education.logo && (
+              <div className="experience-logo-wrap">
+                <img className="experience-logo" src={education.logo} alt={education.school} />
               </div>
-              <p className="entry-period">{education.period}</p>
+            )}
+            <div className="experience-body">
+              <div className="entry-head">
+                <div>
+                  <p className="entry-role">{education.degree}</p>
+                  <p className="entry-org">
+                    {education.school} <span className="entry-loc">· {education.location}</span>
+                  </p>
+                </div>
+                <p className="entry-period">{education.period}</p>
+              </div>
+              <ul className="plain-list" style={{ marginTop: '0.5rem' }}>
+                {education.details.map((detail, i) => (
+                  <li key={i}>{detail}</li>
+                ))}
+              </ul>
             </div>
-            <ul className="plain-list">
-              {education.details.map((detail, i) => (
-                <li key={i}>{detail}</li>
-              ))}
-            </ul>
           </article>
+        </section>
+
+        <section className="section" id="skills">
+          <h2 className="section-heading">skills</h2>
+          <div className="skill-grid">
+            {skills.map((skill) => (
+              <div className="skill-row" key={skill.tag}>
+                <div className="skill-tag">{skill.tag}</div>
+                <p className="skill-items">{skill.items}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="section" id="mentors">
+          <h2 className="section-heading">mentors I'm grateful for</h2>
+          <ul className="plain-list">
+            {mentors.map((mentor, idx) => (
+              <li key={idx} style={{ marginBottom: '1.25rem' }}>
+                <strong>
+                  <a href={mentor.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>
+                    {mentor.name} ({mentor.org})
+                  </a>
+                </strong>
+                <p style={{ margin: '0.35rem 0 0', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+                  {mentor.text}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="section" id="writing">
+          <h2 className="section-heading">writing</h2>
+          <p className="section-blurb">
+            Introductory articles and tutorials on machine learning and computer vision.
+          </p>
+          <div className="paper-list">
+            {writings.map((write, idx) => (
+              <article className="paper-card" key={idx}>
+                <div className="paper-thumb-wrap" style={{ height: '90px' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--link)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <line x1="10" y1="9" x2="8" y2="9"/>
+                  </svg>
+                </div>
+                <div className="paper-body">
+                  <a href={write.pdfUrl} className="paper-title" target="_blank" rel="noopener noreferrer">
+                    {write.title}
+                  </a>
+                  <p className="paper-blurb">{write.description}</p>
+                  <p className="paper-links">
+                    <a href={write.pdfUrl} target="_blank" rel="noopener noreferrer">[Read PDF]</a>
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section" id="projects">
+          <h2 className="section-heading">projects</h2>
+          <p className="section-blurb">
+            Open-source C++ implementations of neural networks and deep learning architectures from scratch.
+          </p>
+          <div className="paper-list">
+            {projects.map((proj, idx) => (
+              <article className="paper-card" key={idx}>
+                <div className="paper-thumb-wrap" style={{ height: '90px' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--link)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"/>
+                    <polyline points="8 6 2 12 8 18"/>
+                  </svg>
+                </div>
+                <div className="paper-body">
+                  <a href={proj.githubUrl} className="paper-title" target="_blank" rel="noopener noreferrer">
+                    {proj.title}
+                  </a>
+                  <p className="paper-blurb">{proj.description}</p>
+                  <p className="paper-links">
+                    <a href={proj.githubUrl} target="_blank" rel="noopener noreferrer">[GitHub Repository]</a>
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
         </section>
       </main>
 

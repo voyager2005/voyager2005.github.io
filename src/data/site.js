@@ -24,15 +24,16 @@ export const socialLinks = [
 ]
 
 export const bio = [
-  'I am a Computer Science student, AI engineer, and MedTech startup co-founder. I build production ML systems, scalable backend infrastructure, and mobile applications end to end.',
+  'I am a Computer Science student and AI research intern at <a href="https://www.shell.in" target="_blank" rel="noopener noreferrer">Shell</a>. I build production ML systems, scalable backend infrastructure, and mobile applications end to end.',
   'My work spans GPU-accelerated inference, computer vision, LLM deployment, and distributed AI pipelines — from research all the way to production. I enjoy leading technical teams and shipping software that real users depend on.',
-  'I am currently pursuing a B.Tech (Honours) in Computer Science and Engineering with a specialization in Artificial Intelligence at the Manipal Institute of Technology, Bengaluru.',
+  'I am currently pursuing a <a href="https://www.manipal.edu/mit-bengaluru/programs/program-list/b-tech/computer-science-and-engineering.html" target="_blank" rel="noopener noreferrer">B.Tech</a> (<a href="https://manipal.edu/mit.html" target="_blank" rel="noopener noreferrer">Honours</a>) in Computer Science and Engineering with a specialization in Artificial Intelligence at the Manipal Institute of Technology, Bengaluru.',
 ]
 
 export const experience = [
   {
     role: 'Intern, Multiphysics AI and Product Innovation',
     org: 'Shell India Markets Private Limited',
+    logo: './images/experience/shell.svg',
     location: 'Bengaluru, India',
     period: 'Jun 2026 – Present',
     points: [
@@ -44,6 +45,7 @@ export const experience = [
   {
     role: 'Co-Founder & ML Engineer',
     org: 'Sensera',
+    logo: './images/experience/sensera.svg',
     location: 'Bengaluru, India',
     period: 'Feb 2026 – Jun 2026',
     points: [
@@ -57,6 +59,7 @@ export const experience = [
   {
     role: 'Machine Learning Lead – Code',
     org: 'CEAM — Center of Excellence in Autonomous Mobility',
+    logo: './images/experience/ceam.svg',
     location: 'Bengaluru, India',
     period: 'Aug 2025 – Aug 2026',
     points: [
@@ -115,7 +118,7 @@ export const publications = [
   {
     title: 'Nucleus Segmentation in H&E-Stained Histopathology Images',
     thumb: './images/publications/nucleus.svg',
-    authors: 'G. Akshat, T. K. Misra',
+    authors: 'G. Akshat, T. K. Mishra',
     venue: 'SAGE Digital Health, 2025 (Accepted, awaiting publication)',
     blurb: 'We present a comparative analysis of deep learning architectures on the MoNuSeg dataset, achieving competitive results for nuclear segmentation in clinical tissue samples.',
     links: [],
@@ -123,7 +126,7 @@ export const publications = [
   {
     title: 'Unsupervised Anatomical Feature Learning via Denoising Diffusion Probabilistic Models',
     thumb: './images/publications/diffusion.svg',
-    authors: 'G. Akshat, S. Bhatnagar, S. Ankalaki, T. K. Misra',
+    authors: 'G. Akshat, S. Bhatnagar, S. Ankalaki, T. K. Mishra',
     venue: 'Submitted to IEEE Access (Under peer review at IEEE Transactions on Medical Imaging)',
     blurb: 'We propose using DDPM pretraining on unlabeled abdominal CT scans (BTCV dataset) to learn robust anatomical priors, showing that diffusion encoders retain over 80% of fully-supervised performance with only 10% of labels.',
     links: [],
@@ -164,8 +167,56 @@ export const publications = [
 
 export const education = {
   school: 'Manipal Institute of Technology',
+  logo: './images/education/mit_logo.svg',
   location: 'Bengaluru, India',
   degree: 'B.Tech (Honours), Computer Science and Engineering',
   period: 'Jul 2023 – May 2027',
   details: ['Specialization: Artificial Intelligence', 'CGPA: 9.56 / 10'],
 }
+
+export const mentors = [
+  {
+    name: 'Vishal Ahuja',
+    org: 'Shell Research',
+    url: 'https://www.linkedin.com/in/vishal-ahuja-a7090556/',
+    text: '[Placeholder: Add what you are grateful for regarding Vishal Ahuja here...]',
+  },
+  {
+    name: 'Dr. Rashmi R',
+    org: 'Manipal Institute of Technology',
+    url: 'https://www.manipal.edu/mu/campuses/mahe-bengaluru/academics/institution-list/mit-blr/department-faculty/faculty-list/dr--rashmi-r.html',
+    text: '[Placeholder: Add what you are grateful for regarding Dr. Rashmi R here...]',
+  },
+  {
+    name: 'Dr. Tusar Kanti Mishra',
+    org: 'Manipal Institute of Technology',
+    url: 'https://www.manipal.edu/mu/campuses/mahe-bengaluru/academics/institution-list/mit-blr/department-faculty/faculty-list/dr--tusar--kanti--midhra.html',
+    text: '[Placeholder: Add what you are grateful for regarding Dr. Tusar Kanti Mishra here...]',
+  },
+]
+
+export const writings = [
+  {
+    title: 'Deep Learning for CV (Beginner Series) - Article 1',
+    description: 'An introductory guide covering the foundational math, matrix operations, and simple network layers for Computer Vision.',
+    pdfUrl: 'https://github.com/voyager2005/deep-learning-for-cv-beginner-articles/blob/main/articles/Article%201.pdf',
+  },
+  {
+    title: 'Deep Learning for CV (Beginner Series) - Article 2',
+    description: 'An in-depth article exploring backpropagation, optimization techniques, and practical neural network training paradigms.',
+    pdfUrl: 'https://github.com/voyager2005/deep-learning-for-cv-beginner-articles/blob/main/articles/Article%202.pdf',
+  },
+]
+
+export const projects = [
+  {
+    title: 'cpp-neural-net',
+    description: 'From-scratch C++ implementations of artificial neural network architectures, forward pass, and backpropagation optimization routines.',
+    githubUrl: 'https://github.com/voyager2005/cpp-neural-net',
+  },
+  {
+    title: 'an-atom',
+    description: 'A modular, header-only C++ library containing from-scratch implementations of fundamental machine learning components and neural layers.',
+    githubUrl: 'https://github.com/voyager2005/an-atom',
+  },
+]
