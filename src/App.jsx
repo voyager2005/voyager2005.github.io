@@ -78,6 +78,23 @@ export default function App() {
                 {bio.map((para, i) => (
                   <p key={i} dangerouslySetInnerHTML={{ __html: para }} />
                 ))}
+                <p style={{ marginTop: '1.25rem', fontSize: '0.85rem' }}>
+                  <button 
+                    onClick={() => handleTabChange('blog')} 
+                    style={{ 
+                      background: 'none', 
+                      border: 'none', 
+                      padding: 0, 
+                      fontFamily: 'inherit', 
+                      fontSize: 'inherit', 
+                      color: 'var(--text-muted)', 
+                      cursor: 'pointer',
+                      textDecoration: 'underline'
+                    }}
+                  >
+                    see my research experience →
+                  </button>
+                </p>
               </div>
 
               <div className="bio-portrait">
@@ -96,7 +113,7 @@ export default function App() {
                         {mentor.name} ({mentor.org})
                       </a>
                     </strong>
-                    <span>: {mentor.text}</span>
+                    <span> {mentor.text}</span>
                   </li>
                 ))}
               </ul>
@@ -187,8 +204,10 @@ export default function App() {
                 ))}
               </div>
             </section>
-
-            <section className="section" id="experience">
+          </>
+        ) : (
+          <>
+            <section className="section" id="experience" style={{ marginTop: '1.5rem' }}>
               <h2 className="section-heading">experience</h2>
               <div className="experience-list">
                 {experience.map((job, idx) => (
@@ -218,10 +237,8 @@ export default function App() {
                 ))}
               </div>
             </section>
-          </>
-        ) : (
-          <>
-            <section className="section" id="writing" style={{ marginTop: '1.5rem' }}>
+
+            <section className="section" id="writing">
               <h2 className="section-heading">writing</h2>
               <p className="section-blurb">
                 Introductory articles and tutorials on machine learning and computer vision.

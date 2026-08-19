@@ -24,9 +24,9 @@ export const socialLinks = [
 ]
 
 export const bio = [
-  'I am a Computer Science student and AI research intern at <a href="https://www.shell.in" target="_blank" rel="noopener noreferrer">Shell</a>. I build production ML systems, scalable backend infrastructure, and mobile applications end to end.',
-  'My work spans GPU-accelerated inference, computer vision, LLM deployment, and distributed AI pipelines — from research all the way to production. I enjoy leading technical teams and shipping software that real users depend on.',
-  'I am currently pursuing a <a href="https://www.manipal.edu/mit-bengaluru/programs/program-list/b-tech/computer-science-and-engineering.html" target="_blank" rel="noopener noreferrer">B.Tech</a> (<a href="https://manipal.edu/mit.html" target="_blank" rel="noopener noreferrer">Honours</a>) in Computer Science and Engineering with a specialization in Artificial Intelligence at the Manipal Institute of Technology, Bengaluru.',
+  'I am a Computer Science student and AI Research Intern at <a href="https://www.shell.in" target="_blank" rel="noopener noreferrer">Shell R&D</a>. I am currently pursuing a <a href="https://www.manipal.edu/mit-bengaluru/programs/program-list/b-tech/computer-science-and-engineering.html" target="_blank" rel="noopener noreferrer">B.Tech (Honours)</a> in Computer Science and Engineering with a specialization in Artificial Intelligence and a Minor in AI for Healthcare at the Manipal Institute of Technology, Bengaluru.',
+  'My research interests lie at the intersection of computer vision, representation learning, and data-efficient/data-centric AI. I am motivated by a fundamental question: how can we build useful structural priors directly into a model rather than expecting it to discover everything from raw data alone? This focus has guided my work on self-supervised representation pretraining using Denoising Diffusion Probabilistic Models (DDPMs) and constructing structurally-consistent hierarchical multi-label vision architectures (HiME).',
+  'I don\'t see myself as only a researcher; I want to understand AI closely enough to improve it and build systems that actual people can depend on. From co-founding Sensera to engineer a production-grade serverless MedTech pipeline, to debugging go-kart autonomous navigation systems at 2 a.m. in the MAVRO laboratory, I believe a technology\'s value lies entirely in whether the person on the other end of it is better off. I want to contribute to the next generation of AI tools, not just as a skilled user, but as one of the people building them.',
 ]
 
 export const experience = [
@@ -106,14 +106,22 @@ export const publicationsConfig = {
 
 export const publications = [
   {
-    title: 'An Asynchronous Document-Processing Pipeline and Semantic Search for Medical Records',
+    title: 'Sensera: A Privacy-First, Offline-First Personal Health Record Architecture',
     thumb: './images/publications/sensera_pub.svg',
-    authors: 'G. Akshat',
-    venue: 'Zenodo Preprint, 2026',
-    blurb: 'We design a production-grade asynchronous MedTech document pipeline using self-hosted LLMs, pgvector, and parallel GPU worker nodes to achieve 3-second document OCR and semantic search retrieval.',
+    authors: 'G. Akshat, A. Sinha',
+    venue: 'Zenodo, 2026',
+    blurb: 'We present a production offline-first mobile health-records system using serverless machine learning (Surya, Qwen2.5-3B, BGE-M3) for document OCR, structured information extraction, and semantic search protected by consent-scoped Row-Level Security.',
     links: [
       { label: 'Zenodo', href: 'https://doi.org/10.5281/zenodo.22013979' }
     ],
+  },
+  {
+    title: 'Unsupervised Anatomical Feature Learning via Denoising Diffusion Probabilistic Models',
+    thumb: './images/publications/diffusion.svg',
+    authors: 'G. Akshat, S. Bhatnagar, S. Ankalaki, T. K. Mishra',
+    venue: 'Submitted to IEEE Access (Under peer review at IEEE Transactions on Medical Imaging), 2026',
+    blurb: 'We propose using DDPM pretraining on unlabeled abdominal CT scans (BTCV dataset) to learn robust anatomical priors, showing that diffusion encoders retain over 80% of fully-supervised performance with only 10% of labels.',
+    links: [],
   },
   {
     title: 'Quality-Controlled Synthetic Medical Data Generation',
@@ -124,21 +132,11 @@ export const publications = [
     links: [],
   },
   {
-    title: 'Binary Classification of Galaxies Using Machine Learning and Deep Learning',
-    thumb: './images/publications/galaxies.svg',
-    authors: 'N. Mishra, G. Akshat, U. Moorthy, V. E. Sathishkumar',
-    venue: 'Data Science and Exploration in Artificial Intelligence (CODE-AI 2025), Springer CCIS, 2026, pp. 88–98',
-    blurb: 'We evaluate different machine learning and deep learning architectures to improve classification accuracy for galaxy morphology.',
-    links: [
-      { label: 'DOI', href: 'https://doi.org/10.1007/978-3-032-19318-6_9' }
-    ],
-  },
-  {
-    title: 'Unsupervised Anatomical Feature Learning via Denoising Diffusion Probabilistic Models',
-    thumb: './images/publications/diffusion.svg',
-    authors: 'G. Akshat, S. Bhatnagar, S. Ankalaki, T. K. Mishra',
-    venue: 'Submitted to IEEE Access (Under peer review at IEEE Transactions on Medical Imaging), 2025',
-    blurb: 'We propose using DDPM pretraining on unlabeled abdominal CT scans (BTCV dataset) to learn robust anatomical priors, showing that diffusion encoders retain over 80% of fully-supervised performance with only 10% of labels.',
+    title: 'Data-Centric Polyp Segmentation for Colorectal Cancer Detection',
+    thumb: './images/publications/polyp_seg.svg',
+    authors: 'G. Akshat, R. R',
+    venue: 'Submitted, 2025',
+    blurb: 'We engineer a data-centric preprocessing pipeline with enhanced ground-truth labels and a deep learning model for polyp segmentation, achieving a Dice score of 0.9525.',
     links: [],
   },
   {
@@ -158,20 +156,22 @@ export const publications = [
     links: [],
   },
   {
-    title: 'Data-Centric Polyp Segmentation for Colorectal Cancer Detection',
-    thumb: './images/publications/polyp_seg.svg',
-    authors: 'G. Akshat, R. R',
-    venue: 'Submitted, 2025',
-    blurb: 'We engineer a data-centric preprocessing pipeline with enhanced ground-truth labels and a deep learning model for polyp segmentation, achieving a Dice score of 0.9525.',
-    links: [],
-  },
-  {
     title: 'Segmenting Lung Regions for TB Detection',
     thumb: './images/publications/lung_seg.svg',
     authors: 'G. Akshat, R. R',
     venue: 'Presented at CVIP 2025; awaiting publication',
     blurb: 'We evaluate advanced U-Net variants for region-of-interest lung segmentation in chest X-rays, optimizing hyperparameters to achieve a Mean Dice score of 0.95.',
     links: [],
+  },
+  {
+    title: 'Binary Classification of Galaxies Using Machine Learning and Deep Learning',
+    thumb: './images/publications/galaxies.svg',
+    authors: 'N. Mishra, G. Akshat, U. Moorthy, V. E. Sathishkumar',
+    venue: 'Data Science and Exploration in Artificial Intelligence (CODE-AI 2025), Springer CCIS, 2026, pp. 88–98',
+    blurb: 'We evaluate different machine learning and deep learning architectures to improve classification accuracy for galaxy morphology.',
+    links: [
+      { label: 'DOI', href: 'https://doi.org/10.1007/978-3-032-19318-6_9' }
+    ],
   },
 ]
 
@@ -189,19 +189,19 @@ export const mentors = [
     name: 'Vishal Ahuja',
     org: 'Shell Research',
     url: 'https://www.linkedin.com/in/vishal-ahuja-a7090556/',
-    text: 'Vishal was my supervisor and project lead at Shell. He trusted me to complete the entire project, end to end, and that trust was what motivated me. I would not have been able to work and learn at Shell, nor design and propose the HiME architecture, if not for his leeway and trust in me to lead the research.',
+    text: 'was my supervisor and project lead at Shell. He trusted me to complete the entire project, end to end, and that trust was what motivated me. I would not have been able to work and learn at Shell, nor design and propose the HiME architecture, if not for his leeway and trust in me to lead the research.',
   },
   {
     name: 'Dr. Rashmi R',
     org: 'Manipal Institute of Technology',
     url: 'https://www.manipal.edu/mu/campuses/mahe-bengaluru/academics/institution-list/mit-blr/department-faculty/faculty-list/dr--rashmi-r.html',
-    text: 'She took me in as an undergraduate research assistant, helped me publish my first paper, and guided me as my B.Tech Project advisor and B.Tech Honors Thesis guide.',
+    text: 'for taking me in as an undergraduate research assistant, helping me publish my first paper, and guiding me as my B.Tech Project advisor and B.Tech Honors Thesis guide.',
   },
   {
     name: 'Dr. Tusar Kanti Mishra',
     org: 'Manipal Institute of Technology',
     url: 'https://www.manipal.edu/mu/campuses/mahe-bengaluru/academics/institution-list/mit-blr/department-faculty/faculty-list/dr--tusar--kanti--midhra.html',
-    text: 'He helped me publish my first journal paper as my advisor, and I am grateful for his insights in teaching me how to approach academic research.',
+    text: 'for helping me publish my first journal paper as my advisor, and learning how to approach research under his guidance.',
   },
 ]
 
