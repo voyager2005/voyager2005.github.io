@@ -106,6 +106,24 @@ export const publicationsConfig = {
 
 export const publications = [
   {
+    title: 'An Asynchronous Document-Processing Pipeline and Semantic Search for Medical Records',
+    thumb: './images/publications/sensera_pub.svg',
+    authors: 'G. Akshat',
+    venue: 'Zenodo Preprint, 2026',
+    blurb: 'We design a production-grade asynchronous MedTech document pipeline using self-hosted LLMs, pgvector, and parallel GPU worker nodes to achieve 3-second document OCR and semantic search retrieval.',
+    links: [
+      { label: 'Zenodo', href: 'https://doi.org/10.5281/zenodo.22013979' }
+    ],
+  },
+  {
+    title: 'Quality-Controlled Synthetic Medical Data Generation',
+    thumb: './images/publications/synthetic_gan.svg',
+    authors: 'G. Akshat, R. R',
+    venue: 'Honors Thesis, Submitted, 2026',
+    blurb: 'We develop a Teacher-Student semi-supervised framework using conditional GANs to synthesize high-quality lumbar spine MRI slices while filtering out synthetic noise through a novel quality assessment metric.',
+    links: [],
+  },
+  {
     title: 'Binary Classification of Galaxies Using Machine Learning and Deep Learning',
     thumb: './images/publications/galaxies.svg',
     authors: 'N. Mishra, G. Akshat, U. Moorthy, V. E. Sathishkumar',
@@ -116,27 +134,19 @@ export const publications = [
     ],
   },
   {
+    title: 'Unsupervised Anatomical Feature Learning via Denoising Diffusion Probabilistic Models',
+    thumb: './images/publications/diffusion.svg',
+    authors: 'G. Akshat, S. Bhatnagar, S. Ankalaki, T. K. Mishra',
+    venue: 'Submitted to IEEE Access (Under peer review at IEEE Transactions on Medical Imaging), 2025',
+    blurb: 'We propose using DDPM pretraining on unlabeled abdominal CT scans (BTCV dataset) to learn robust anatomical priors, showing that diffusion encoders retain over 80% of fully-supervised performance with only 10% of labels.',
+    links: [],
+  },
+  {
     title: 'Nucleus Segmentation in H&E-Stained Histopathology Images',
     thumb: './images/publications/nucleus.svg',
     authors: 'G. Akshat, T. K. Mishra',
     venue: 'SAGE Digital Health, 2025 (Accepted, awaiting publication)',
     blurb: 'We present a comparative analysis of deep learning architectures on the MoNuSeg dataset, achieving competitive results for nuclear segmentation in clinical tissue samples.',
-    links: [],
-  },
-  {
-    title: 'Unsupervised Anatomical Feature Learning via Denoising Diffusion Probabilistic Models',
-    thumb: './images/publications/diffusion.svg',
-    authors: 'G. Akshat, S. Bhatnagar, S. Ankalaki, T. K. Mishra',
-    venue: 'Submitted to IEEE Access (Under peer review at IEEE Transactions on Medical Imaging)',
-    blurb: 'We propose using DDPM pretraining on unlabeled abdominal CT scans (BTCV dataset) to learn robust anatomical priors, showing that diffusion encoders retain over 80% of fully-supervised performance with only 10% of labels.',
-    links: [],
-  },
-  {
-    title: 'Quality-Controlled Synthetic Medical Data Generation',
-    thumb: './images/publications/synthetic_gan.svg',
-    authors: 'G. Akshat, R. R',
-    venue: 'Honors Thesis, Submitted, 2026',
-    blurb: 'We develop a Teacher-Student semi-supervised framework using conditional GANs to synthesize high-quality lumbar spine MRI slices while filtering out synthetic noise through a novel quality assessment metric.',
     links: [],
   },
   {
