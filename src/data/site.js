@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Akshat G',
   location: 'Bengaluru, India',
-  photo: './images/profile.svg',
+  photo: './images/profile.jpeg',
   cv: './Akshat_G_CV.pdf',
 }
 
