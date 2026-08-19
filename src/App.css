@@ -358,3 +358,39 @@
     width: max-content;
   }
 }
+
+/* ---------- Academic Publications ---------- */
+.pub-authors {
+  margin: 0.25rem 0 0;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.pub-venue {
+  margin: 0.15rem 0 0;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.pub-links {
+  margin-top: 0.45rem;
+  display: flex;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+}
+
+.pub-link-badge {
+  color: var(--link);
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+}
+
+.pub-link-badge:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+

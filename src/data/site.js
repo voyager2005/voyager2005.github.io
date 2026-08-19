@@ -97,17 +97,48 @@ export const skills = [
   { tag: 'frontend & backend', items: 'React Native (Expo SDK 54), React, FastAPI, Pydantic' },
 ]
 
-export const publications = {
-  summary:
-    'Authored 8+ publications in data-centric AI, semi-supervised learning, and few-shot learning. Published in Scientific Reports, SAGE Digital Health, and Springer CCIS, with work peer reviewed in IEEE Transactions on Medical Imaging.',
-  venues: [
-    'Scientific Reports',
-    'SAGE Digital Health',
-    'Springer CCIS',
-    'IEEE Transactions on Medical Imaging (peer review)',
-  ],
+export const publicationsConfig = {
   scholarUrl: 'https://scholar.google.com/',
 }
+
+export const publications = [
+  {
+    title: 'Binary Classification of Galaxies Using Machine Learning and Deep Learning',
+    authors: 'N. Mishra, G. Akshat, U. Moorthy, V. E. Sathishkumar',
+    venue: 'Data Science and Exploration in Artificial Intelligence (CODE-AI 2025), Springer CCIS, 2026, pp. 88–98',
+    doi: 'https://doi.org/10.1007/978-3-032-19318-6_9',
+  },
+  {
+    title: 'Nucleus Segmentation in H&E-Stained Histopathology Images',
+    authors: 'G. Akshat, T. K. Misra',
+    venue: 'SAGE Digital Health, 2025 (Accepted, awaiting publication)',
+  },
+  {
+    title: 'Unsupervised Anatomical Feature Learning via Denoising Diffusion Probabilistic Models',
+    authors: 'G. Akshat, S. Bhatnagar, S. Ankalaki, T. K. Misra',
+    venue: 'Submitted to IEEE Access (Under peer review at IEEE Transactions on Medical Imaging)',
+  },
+  {
+    title: 'Quality-Controlled Synthetic Medical Data Generation',
+    authors: 'G. Akshat, R. R',
+    venue: 'Honors Thesis, Submitted, 2026',
+  },
+  {
+    title: 'Semi-Supervised Learning on Constrained Datasets',
+    authors: 'G. Akshat, R. R, G. Surathkal',
+    venue: 'Submitted, 2025',
+  },
+  {
+    title: 'Data-Centric Polyp Segmentation for Colorectal Cancer Detection',
+    authors: 'G. Akshat, R. R',
+    venue: 'Submitted, 2025',
+  },
+  {
+    title: 'Segmenting Lung Regions for TB Detection',
+    authors: 'G. Akshat, R. R',
+    venue: 'Presented at CVIP 2025; awaiting publication',
+  },
+]
 
 export const education = {
   school: 'Manipal Institute of Technology',

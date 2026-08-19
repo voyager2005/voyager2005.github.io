@@ -49,18 +49,4 @@ h3 {
   font-weight: 700;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #101114;
-    --text: #ededed;
-    --text-secondary: #b8b8b8;
-    --text-muted: #7a7a7a;
-    --link: #6ea8fe;
-    --link-hover: #93c0ff;
-    --hover: #6ea8fe;
-    --accent-strong: #6ea8fe;
-    --border: #26282d;
-    --card-bg: #17191d;
-    --card-border: #26282d;
-  }
-}
+/* Auto dark mode media query removed to lock website to JaydenTeoh's light academic theme */

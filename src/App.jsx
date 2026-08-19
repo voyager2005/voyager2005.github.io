@@ -6,6 +6,7 @@ import {
   experience,
   skills,
   publications,
+  publicationsConfig,
   education,
 } from './data/site.js'
 import './App.css'
@@ -80,16 +81,35 @@ export default function App() {
 
         <section className="section" id="publications">
           <h2 className="section-heading">publications</h2>
-          <p className="section-blurb">{publications.summary}</p>
-          <ul className="chip-list">
-            {publications.venues.map((venue) => (
-              <li className="chip" key={venue}>
-                {venue}
-              </li>
+          <div className="entry-list">
+            {publications.map((pub, idx) => (
+              <article className="entry" key={idx}>
+                <div className="entry-head">
+                  <p className="entry-role">{pub.title}</p>
+                </div>
+                <p className="pub-authors">
+                  {pub.authors.split('G. Akshat').map((part, i, arr) => (
+                    <span key={i}>
+                      {part}
+                      {i < arr.length - 1 && <strong>G. Akshat</strong>}
+                    </span>
+                  ))}
+                </p>
+                <p className="pub-venue">
+                  <em>{pub.venue}</em>
+                </p>
+                {pub.doi && (
+                  <div className="pub-links">
+                    <a href={pub.doi} target="_blank" rel="noopener noreferrer" className="pub-link-badge">
+                      [DOI]
+                    </a>
+                  </div>
+                )}
+              </article>
             ))}
-          </ul>
+          </div>
           <p className="section-more">
-            <a href={publications.scholarUrl} target="_blank" rel="noopener noreferrer">
+            <a href={publicationsConfig.scholarUrl} target="_blank" rel="noopener noreferrer">
               see all on Google Scholar →
             </a>
           </p>
