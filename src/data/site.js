@@ -45,7 +45,7 @@ export const experience = [
   {
     role: 'Co-Founder & ML Engineer',
     org: 'Sensera',
-    logo: './images/experience/sensera.svg',
+    logo: './images/experience/sensera.png',
     location: 'Bengaluru, India',
     period: 'Feb 2026 – Jun 2026',
     points: [
@@ -59,7 +59,7 @@ export const experience = [
   {
     role: 'Machine Learning Lead – Code',
     org: 'CEAM — Center of Excellence in Autonomous Mobility',
-    logo: './images/experience/ceam.svg',
+    logo: './images/experience/ceam.jpeg',
     location: 'Bengaluru, India',
     period: 'Aug 2025 – Aug 2026',
     points: [
@@ -167,7 +167,7 @@ export const publications = [
 
 export const education = {
   school: 'Manipal Institute of Technology',
-  logo: './images/education/mit_logo.svg',
+  logo: './images/education/mit_logo.jpg',
   location: 'Bengaluru, India',
   degree: 'B.Tech (Honours), Computer Science and Engineering',
   period: 'Jul 2023 – May 2027',
