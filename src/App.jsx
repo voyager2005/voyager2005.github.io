@@ -212,7 +212,10 @@ export default function App() {
           </>
         ) : currentTab === 'blog' ? (
           <>
-            <section className="section" id="writing" style={{ marginTop: '1.5rem' }}>
+            <p className="section-blurb" style={{ fontStyle: 'italic', marginBottom: '2.5rem', marginTop: '1rem' }}>
+              Here are some casual projects and articles I have worked on.
+            </p>
+            <section className="section" id="writing">
               <h2 className="section-heading">writing</h2>
               <p className="section-blurb">
                 Introductory articles and tutorials on machine learning and computer vision.
@@ -275,6 +278,9 @@ export default function App() {
           <>
             <section className="section" id="experience" style={{ marginTop: '1.5rem' }}>
               <h2 className="section-heading">experience</h2>
+              <p className="section-blurb">
+                Here is some of the technical work experience I carry.
+              </p>
               <div className="experience-list">
                 {experience.map((job, idx) => (
                   <article className="experience-card" key={idx}>

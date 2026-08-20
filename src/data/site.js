@@ -109,9 +109,9 @@ export const publications = [
     thumb: './images/publications/sensera_pub.svg',
     authors: 'G. Akshat, A. Sinha',
     venue: 'Zenodo, 2026',
-    blurb: 'We present a production offline-first mobile health-records system using serverless machine learning (Surya, Qwen2.5-3B, BGE-M3) for document OCR, structured information extraction, and semantic search protected by consent-scoped Row-Level Security.',
+    blurb: 'Shipped an end-to-end machine learning application.',
     links: [
-      { label: 'Zenodo', href: 'https://doi.org/10.5281/zenodo.22013979' }
+      { label: 'DOI', href: 'https://doi.org/10.5281/zenodo.22013979' }
     ],
   },
   {
@@ -159,7 +159,7 @@ export const publications = [
     thumb: './images/publications/lung_seg.svg',
     authors: 'G. Akshat, R. R',
     venue: 'Presented at CVIP 2025; awaiting publication',
-    blurb: 'We evaluate advanced U-Net variants for region-of-interest lung segmentation in chest X-rays, optimizing hyperparameters to achieve a Mean Dice score of 0.95.',
+    blurb: 'Different U-Net encoder blocks have their own function; we benchmarked when to use what type of U-Net.',
     links: [],
   },
   {
