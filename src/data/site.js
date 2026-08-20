@@ -196,12 +196,6 @@ export const mentors = [
     url: 'https://www.manipal.edu/mu/campuses/mahe-bengaluru/academics/institution-list/mit-blr/department-faculty/faculty-list/dr--rashmi-r.html',
     text: 'for taking me in as an undergraduate research assistant, helping me publish my first paper, and guiding me as my B.Tech Project advisor and B.Tech Honors Thesis guide.',
   },
-  {
-    name: 'Dr. Tusar Kanti Mishra',
-    org: 'Manipal Institute of Technology',
-    url: 'https://www.manipal.edu/mu/campuses/mahe-bengaluru/academics/institution-list/mit-blr/department-faculty/faculty-list/dr--tusar--kanti--midhra.html',
-    text: 'for helping me publish my first journal paper as my advisor, and learning how to approach research under his guidance.',
-  },
 ]
 
 export const writings = [
