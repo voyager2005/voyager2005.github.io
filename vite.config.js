@@ -11,6 +11,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         blog: resolve(__dirname, 'blog.html'),
         experience: resolve(__dirname, 'experience.html'),
+        resume: resolve(__dirname, 'resume.html'),
       },
     },
   },

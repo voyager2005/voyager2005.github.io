@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Akshat G — Resume</title>
+<style>
+  :root {
+    --accent: #2563EB;
+    --accent-light: #EFF4FF;
+    --text-main: #1A1A1A;
+    --text-muted: #6B7280;
+    --border: #E5E7EB;
+    --sidebar-bg: #F7F8FA;
+    --tag-bg: #F3F4F6;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    color: var(--text-main);
+    background: #E9EAEC;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    margin: 24px auto;
+    background: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ---------- Header ---------- */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 24px 32px 14px;
+  }
+
+  .header-left { flex: 1; }
+
+  .name {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text-main);
+  }
+
+  .title {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-top: 2px;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 14px;
+    margin-top: 8px;
+    font-size: 11.5px;
+    color: var(--text-muted);
+  }
+
+  .contact-row a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+
+  .contact-row a:hover { color: var(--accent); }
+
+  .contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .contact-item svg { flex-shrink: 0; opacity: 0.75; }
+
+  /* ---------- Layout ---------- */
+  .body-grid {
+    display: grid;
+    grid-template-columns: 1.85fr 1fr;
+    gap: 0;
+    border-top: 1px solid var(--border);
+    flex-grow: 1;
+  }
+
+  .col-main {
+    padding: 16px 20px 16px 24px;
+    border-right: 1px solid var(--border);
+  }
+
+  .col-side {
+    padding: 16px 24px 16px 20px;
+    background: var(--sidebar-bg);
+  }
+
+  /* ---------- Section headings ---------- */
+  h2.section-title {
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-main);
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--text-main);
+  }
+
+  .col-main section { margin-bottom: 14px; }
+  .col-side section { margin-bottom: 16px; }
+
+  .summary-text { color: #374151; font-size: 12.5px; line-height: 1.4; text-align: justify; }
+
+  /* ---------- Experience entries ---------- */
+  .entry { margin-bottom: 12px; }
+  .entry:last-child { margin-bottom: 0; }
+
+  .entry-role {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+
+  .entry-company {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-top: 1px;
+  }
+
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 3px;
+    margin-bottom: 6px;
+  }
+
+  .entry-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .entry-meta svg { opacity: 0.7; }
+
+  .entry-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .entry-note {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+
+  ul.bullets {
+    list-style: none;
+    padding: 0;
+  }
+
+  ul.bullets li {
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 5px;
+    font-size: 11.5px;
+    line-height: 1.35;
+    color: #374151;
+    text-align: justify;
+  }
+
+  ul.bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 3.5px;
+    height: 3.5px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  ul.bullets li b { color: var(--text-main); font-weight: normal; }
+
+  .compact-entry {
+    padding-top: 10px;
+    margin-top: 4px;
+    border-top: 1px dashed var(--border);
+  }
+
+  .compact-entry .entry-role { font-size: 13px; }
+  .compact-entry .entry-desc { font-size: 12.5px; color: #4B5563; margin-top: 3px; }
+
+  /* ---------- Sidebar: Education ---------- */
+  .edu-degree { font-size: 13px; font-weight: 700; color: var(--text-main); line-height: 1.35; }
+  .edu-school { font-size: 12.5px; font-weight: 600; color: var(--accent); margin-top: 6px; }
+  .edu-meta { font-size: 11.5px; color: var(--text-muted); margin-top: 3px; display: flex; flex-direction: column; gap: 2px; }
+  .edu-meta span { display: inline-flex; align-items: center; gap: 4px; }
+
+  .cgpa-box {
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 10px;
+  }
+
+  .cgpa-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .cgpa-value { font-size: 15px; font-weight: 800; color: var(--accent); }
+  .cgpa-max { font-size: 11px; color: var(--text-muted); }
+
+  /* ---------- Sidebar: Skills ---------- */
+  .skill-group { margin-bottom: 14px; }
+  .skill-group:last-child { margin-bottom: 0; }
+
+  .skill-cat {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 7px;
+  }
+
+  .skill-list {
+    font-size: 11.5px;
+    color: #4B5563;
+    line-height: 1.45;
+    text-align: justify;
+  }
+
+  /* ---------- Publications ---------- */
+  .pub-links {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .pub-links a {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .entry-links {
+    font-weight: normal;
+    font-size: 11px;
+    margin-left: 8px;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .entry-links a {
+    color: var(--accent);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .pub-text { font-size: 13px; color: #374151; }
+  .pub-text i { color: #4B5563; }
+
+  @media print {
+    body { background: #fff; }
+    .page { box-shadow: none; margin: 0; width: 100%; height: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ================= HEADER ================= -->
+  <div class="header">
+    <div class="header-left">
+      <div class="name">Akshat G</div>
+      <div class="title">AI/ML Engineer &amp; MedTech Co-Founder</div>
+      <div class="contact-row">
+        <span class="contact-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 97407 22099
+        </span>
+        <span class="contact-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><path d="M2 6h20v12H2z"/></svg>
+          <a href="mailto:akshat.gururaj@gmail.com">akshat.gururaj@gmail.com</a>
+        </span>
+        <span class="contact-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>
+          <a href="https://voyager2005.github.io/" target="_blank">voyager2005.github.io</a>
+        </span>
+        <span class="contact-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <a href="https://linkedin.com/in/akshat-gururaj" target="_blank">in/akshat-gururaj</a>
+        </span>
+        <span class="contact-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <a href="https://github.com/voyager2005" target="_blank">voyager2005</a>
+        </span>
+        <span class="contact-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Bengaluru, India
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= BODY GRID ================= -->
+  <div class="body-grid">
+
+    <!-- ================= MAIN COLUMN ================= -->
+    <div class="col-main">
+
+      <section>
+        <h2 class="section-title">Summary</h2>
+        <p class="summary-text">AI/ML engineer and MedTech startup co-founder specializing in production ML systems, computer vision, LLMs, and GPU-accelerated inference. Experience building real-time perception pipelines, leading technical teams, and shipping end-to-end AI systems from research to deployment.</p>
+      </section>
+
+      <section>
+        <h2 class="section-title">Professional Experience</h2>
+
+        <div class="entry">
+          <div class="entry-role">Research Intern — Multiphysics AI &amp; Product Innovation</div>
+          <div class="entry-company">Shell India Markets Private Limited</div>
+          <div class="entry-meta">
+            <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Jun 2026 – Present</span>
+            <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bengaluru, India</span>
+          </div>
+          <ul class="bullets">
+            <li>Developed HiME (Hierarchical Multi-label Estimator), a novel architecture for hierarchical classification across 27 classes and roughly 1.05M valid label paths, achieving 100% hierarchy consistency and 91% root-to-leaf accuracy on a custom gear defect dataset.</li>
+            <li>Architected a multi-agent ensemble inference pipeline simulating an expert panel, coordinating specialized vision backbones (ConvNeXt, DeepLabV3, ResNet-50) to corroborate and contextualize HiME’s primary diagnostics.</li>
+            <li>Deployed a client-side AI assistant that parses ensemble JSON outputs into a fine-tuned instruct LLM for automated report generation, cutting turnaround from roughly 40 hours to 2 hours with human-in-the-loop validation.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="entry">
+          <div class="entry-role">Sensera <span class="entry-links"><a href="https://github.com/voyager2005" target="_blank"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Code ↗</a><a href="https://doi.org/10.5281/zenodo.22013979" target="_blank"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>DOI ↗</a></span></div>
+          <div class="entry-company">Co-Founder &amp; ML Engineer</div>
+          <div class="entry-meta">
+            <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Feb 2026 – Jun 2026</span>
+            <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bengaluru, India</span>
+          </div>
+          <ul class="bullets">
+            <li>Co-founded an AI MedTech startup; shipped a full-stack Personal Health Record platform with 50+ daily active users.</li>
+            <li>Built an async document pipeline decoupling OCR/NLP inference across 10 parallel GPU workers, achieving sub-3-second document processing and extraction.</li>
+            <li>Implemented semantic search over medical records (pgvector, row-level security) and a self-hosted LLM pipeline for summarization and structured extraction — sub-second, user-isolated retrieval with no dependence on external inference APIs.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-role">CEAM — Center of Excellence in Autonomous Mobility <span class="entry-links"><a href="https://github.com/voyager2005" target="_blank"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Code ↗</a><a href="https://doi.org/10.5281/zenodo.22018680" target="_blank"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>DOI ↗</a></span></div>
+          <div class="entry-company">Perception Lead, Project MAVERIC</div>
+          <div class="entry-meta">
+            <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Aug 2025 – Aug 2026</span>
+            <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bengaluru, India</span>
+          </div>
+          <ul class="bullets">
+            <li>Led perception for MAVERIC, a fully autonomous go-kart, building the real-time perception stack around ROS 2, sensor integration, vision pipelines, and object tracking.</li>
+            <li>Led a 16-member computer vision team; built perception pipelines in optimized C++ (Eigen) and NumPy. Achieved 56 FPS semantic segmentation and 16 FPS object detection.</li>
+            <li>Developed a custom LiDAR-camera fusion pipeline for 3D scene understanding and real-time path planning.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section style="margin-bottom: 0;">
+        <h2 class="section-title">Publications</h2>
+        <div class="pub-links">
+          <a href="https://scholar.google.com/citations?user=afBmyAwAAAAJ&hl=en" target="_blank"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg> Google Scholar ↗</a>
+          <a href="https://orcid.org/0009-0000-9244-1513" target="_blank"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M15 13h4M15 9h4M5 18s1-1 4-1 4 1 4 1"/></svg> ORCID ↗</a>
+        </div>
+        <p class="pub-text">2 conference and 5 accepted journal papers spanning data-centric AI, semi-supervised learning, representation learning, efficient ai, and explainable ai including Scientific Reports, SAGE Digital Health, Springer CCIS, and IEEE Access.</p>
+      </section>
+
+    </div>
+
+    <!-- ================= SIDEBAR ================= -->
+    <div class="col-side">
+
+      <section>
+        <h2 class="section-title">Education</h2>
+        <div class="edu-degree">B.Tech (Honours), Computer Science and Engineering — AI Specialization</div>
+        <div class="edu-school">Manipal Institute of Technology</div>
+        <div class="edu-meta">
+          <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Jul 2023 – May 2027</span>
+          <span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bengaluru, India</span>
+        </div>
+        <div class="cgpa-box">
+          <span class="cgpa-label">CGPA</span>
+          <span class="cgpa-value">9.56</span>
+          <span class="cgpa-max">/ 10.00</span>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skill-group">
+          <div class="skill-cat">Programming</div>
+          <p class="skill-list">Python, C/C++, Java, TypeScript, JavaScript, SQL, Bash</p>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-cat">ML Frameworks &amp; Tools</div>
+          <p class="skill-list">PyTorch, TensorFlow, HuggingFace, Transformers, Sentence-Transformers, TensorRT, ONNX Runtime, CUDA, OpenCV, scikit-learn, NumPy</p>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-cat">AI/ML</div>
+          <p class="skill-list">Machine Learning, Deep Learning, Computer Vision, NLP, LLMs, RAG, Semantic Search, Vector Embeddings, Transfer Learning, Fine-tuning</p>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-cat">Cloud &amp; Systems</div>
+          <p class="skill-list">Linux, Docker, Modal, AWS, Google Cloud, Supabase, Git</p>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-cat">Databases &amp; Backend</div>
+          <p class="skill-list">PostgreSQL, Schema Design, RLS, Migrations &amp; Indexing, pgvector, HNSW ANN, FastAPI, Pydantic, React, React Native</p>
+        </div>
+
+      </section>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

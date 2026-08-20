@@ -14,7 +14,7 @@ export const socialLinks = [
     icon: 'fas fa-graduation-cap',
   },
   { label: 'CV (Detailed)', href: './Akshat_G_CV.pdf', icon: 'fas fa-file-lines' },
-  { label: 'Resume (1-Page)', href: './Akshat_G_Resume.pdf', icon: 'fas fa-file-pdf' },
+  { label: 'Resume (1-Page)', href: './resume.html', icon: 'fas fa-file-lines' },
   { label: 'GitHub', href: 'https://github.com/voyager2005', icon: 'fab fa-github' },
   {
     label: 'LinkedIn',
