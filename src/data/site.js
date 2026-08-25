@@ -63,7 +63,7 @@ export const experience = [
     logo: './images/experience/ceam.jpeg',
     location: 'Bengaluru, India',
     period: 'Aug 2025 – Aug 2026',
-    codeUrl: 'https://github.com/voyager2005',
+    codeUrl: 'https://github.com/voyager2005/maveric-perception-stack',
     doiUrl: 'https://doi.org/10.5281/zenodo.22018680',
     points: [
       'Led a 16-member computer vision team developing Project MAVERIC, an autonomous perception stack for real-time robotic navigation.',
@@ -230,7 +230,7 @@ export const projects = [
   {
     title: 'MAVERIC',
     description: 'Autonomous vehicle sensor fusion and 3D object tracking pipeline utilizing TensorRT acceleration and deterministic geometric physics.',
-    githubUrl: 'https://github.com/voyager2005',
+    githubUrl: 'https://github.com/voyager2005/maveric-perception-stack',
     doiUrl: 'https://doi.org/10.5281/zenodo.22018682',
   },
 ]
