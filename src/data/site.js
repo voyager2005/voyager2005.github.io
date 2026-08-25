@@ -192,12 +192,12 @@ export const writings = [
   {
     title: 'Deep Learning for CV (Beginner Series) - Article 1',
     description: 'An introductory guide covering the foundational math, matrix operations, and simple network layers for Computer Vision.',
-    pdfUrl: 'https://github.com/voyager2005/deep-learning-for-cv-beginner-articles/blob/main/articles/Article%201.pdf',
+    pdfUrl: 'https://doi.org/10.5281/zenodo.22102050',
   },
   {
     title: 'Deep Learning for CV (Beginner Series) - Article 2',
     description: 'An in-depth article exploring backpropagation, optimization techniques, and practical neural network training paradigms.',
-    pdfUrl: 'https://github.com/voyager2005/deep-learning-for-cv-beginner-articles/blob/main/articles/Article%202.pdf',
+    pdfUrl: 'https://doi.org/10.5281/zenodo.22102112',
   },
 ]
 

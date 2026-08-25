@@ -238,7 +238,7 @@ export default function App() {
                       </a>
                       <p className="paper-blurb">{write.description}</p>
                       <p className="paper-links">
-                        <a href={write.pdfUrl} target="_blank" rel="noopener noreferrer">[Read PDF]</a>
+                        <a href={write.pdfUrl} target="_blank" rel="noopener noreferrer">[DOI / Zenodo]</a>
                       </p>
                     </div>
                   </article>
