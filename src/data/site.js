@@ -105,16 +105,6 @@ export const publicationsConfig = {
 
 export const publications = [
   {
-    title: 'Sensera: A Privacy-First, Offline-First Personal Health Record Architecture',
-    thumb: './images/publications/sensera_pub.svg',
-    authors: 'G. Akshat, A. Sinha',
-    venue: 'Zenodo, 2026',
-    blurb: 'Shipped an end-to-end machine learning application.',
-    links: [
-      { label: 'DOI', href: 'https://doi.org/10.5281/zenodo.22013979' }
-    ],
-  },
-  {
     title: 'Unsupervised Anatomical Feature Learning via Denoising Diffusion Probabilistic Models',
     thumb: './images/publications/diffusion.svg',
     authors: 'G. Akshat, S. Bhatnagar, S. Ankalaki, T. K. Mishra',
@@ -221,5 +211,20 @@ export const projects = [
     title: 'an-atom',
     description: 'A modular, header-only C++ library containing from-scratch implementations of fundamental machine learning components and neural layers.',
     githubUrl: 'https://github.com/voyager2005/an-atom',
+  },
+  {
+    title: 'Sensera',
+    description: 'A privacy-first, offline-first personal health record system decoupling machine learning pipelines and using patient-owned Google Drive storage under an app-scoped grant.',
+    doiUrl: 'https://doi.org/10.5281/zenodo.22013979',
+  },
+  {
+    title: 'Structure-Preserving Stain Transfer',
+    description: 'A technical implementation of Vahadane et al. structure-preserving stain transfer for digital histopathology images to reduce color variations.',
+    doiUrl: 'https://doi.org/10.5281/zenodo.22092812',
+  },
+  {
+    title: 'MAVERIC',
+    description: 'Autonomous vehicle sensor fusion and 3D object tracking pipeline utilizing TensorRT acceleration and deterministic geometric physics.',
+    doiUrl: 'https://doi.org/10.5281/zenodo.22018682',
   },
 ]

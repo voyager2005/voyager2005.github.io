@@ -249,24 +249,38 @@ export default function App() {
             <section className="section" id="projects">
               <h2 className="section-heading">projects</h2>
               <p className="section-blurb">
-                Open-source C++ implementations of neural networks and deep learning architectures from scratch.
+                Open-source software, engineering projects, and research tools.
               </p>
               <div className="paper-list">
                 {projects.map((proj, idx) => (
                   <article className="paper-card" key={idx}>
                     <div className="paper-thumb-wrap" style={{ height: '90px' }}>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--link)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="16 18 22 12 16 6"/>
-                        <polyline points="8 6 2 12 8 18"/>
-                      </svg>
+                      {proj.githubUrl && !proj.doiUrl ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--link)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="16 18 22 12 16 6"/>
+                          <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                      ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="var(--link)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                          <polyline points="14 2 14 8 20 8"/>
+                          <line x1="16" y1="13" x2="8" y2="13"/>
+                          <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                      )}
                     </div>
                     <div className="paper-body">
-                      <a href={proj.githubUrl} className="paper-title" target="_blank" rel="noopener noreferrer">
+                      <a href={proj.githubUrl || proj.doiUrl} className="paper-title" target="_blank" rel="noopener noreferrer">
                         {proj.title}
                       </a>
                       <p className="paper-blurb">{proj.description}</p>
                       <p className="paper-links">
-                        <a href={proj.githubUrl} target="_blank" rel="noopener noreferrer">[GitHub Repository]</a>
+                        {proj.githubUrl && (
+                          <a href={proj.githubUrl} target="_blank" rel="noopener noreferrer" style={{ marginRight: '10px' }}>[GitHub]</a>
+                        )}
+                        {proj.doiUrl && (
+                          <a href={proj.doiUrl} target="_blank" rel="noopener noreferrer">[DOI / Zenodo]</a>
+                        )}
                       </p>
                     </div>
                   </article>
