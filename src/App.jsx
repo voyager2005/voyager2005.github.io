@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import TypingText from './components/TypingText.jsx'
 import IconLinks from './components/IconLinks.jsx'
 import {
@@ -25,6 +25,20 @@ export default function App() {
     }
     return 'home'
   })
+
+  useEffect(() => {
+    const handlePopState = () => {
+      if (window.location.pathname.includes('blog') || window.location.hash.includes('blog')) {
+        setCurrentTab('blog')
+      } else if (window.location.pathname.includes('experience') || window.location.hash.includes('experience')) {
+        setCurrentTab('experience')
+      } else {
+        setCurrentTab('home')
+      }
+    }
+    window.addEventListener('popstate', handlePopState)
+    return () => window.removeEventListener('popstate', handlePopState)
+  }, [])
 
   const handleTabChange = (tab) => {
     setCurrentTab(tab)
@@ -310,6 +324,16 @@ export default function App() {
                           <p className="entry-org">
                             {job.org} <span className="entry-loc">· {job.location}</span>
                           </p>
+                          {(job.codeUrl || job.doiUrl) && (
+                            <p className="paper-links" style={{ marginTop: '0.35rem', fontSize: '0.85rem' }}>
+                              {job.codeUrl && (
+                                <a href={job.codeUrl} target="_blank" rel="noopener noreferrer" style={{ marginRight: '10px' }}>[GitHub]</a>
+                              )}
+                              {job.doiUrl && (
+                                <a href={job.doiUrl} target="_blank" rel="noopener noreferrer">[DOI / Zenodo]</a>
+                              )}
+                            </p>
+                          )}
                         </div>
                         <p className="entry-period">{job.period}</p>
                       </div>

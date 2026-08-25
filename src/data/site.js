@@ -24,7 +24,7 @@ export const socialLinks = [
 ]
 
 export const bio = [
-  'I am a Computer Science Honours student at <a href="https://www.manipal.edu/mit-bengaluru/programs/program-list/b-tech/computer-science-and-engineering.html" target="_blank" rel="noopener noreferrer">Manipal Institute of Technology</a> specializing in AI with a Minor in AI for Healthcare, and an AI Research Intern at <a href="https://www.shell.in" target="_blank" rel="noopener noreferrer">Shell R&D</a>.',
+  'I am a Computer Science Honours student at <a href="https://www.manipal.edu/mu/campuses/mahe-bengaluru/academics/institution-list/mit-blr.html" target="_blank" rel="noopener noreferrer">Manipal Institute of Technology</a> specializing in AI with a Minor in AI for Healthcare, and an AI Research Intern at <a href="https://www.shell.in" target="_blank" rel="noopener noreferrer">Shell R&D</a>.',
   'My research interests focus on computer vision and data-efficient, data-centric machine learning—specifically representation pretraining (DDPMs) and structural constraints in hierarchical vision models (HiME).',
 ]
 
@@ -47,6 +47,8 @@ export const experience = [
     logo: './images/experience/sensera.png',
     location: 'Bengaluru, India',
     period: 'Feb 2026 – Jun 2026',
+    codeUrl: 'https://github.com/voyager2005',
+    doiUrl: 'https://doi.org/10.5281/zenodo.22013979',
     points: [
       'Co-founded an AI MedTech startup building intelligent Personal Health Records; shipped a full-stack platform supporting medication tracking, vitals, and document management for 50+ daily active users.',
       'Architected an asynchronous document-processing pipeline that decoupled OCR and NLP inference across 10 parallel GPU workers, reducing end-to-end latency to 3 s warm-start and 10 s cold-start.',
@@ -56,11 +58,13 @@ export const experience = [
     ],
   },
   {
-    role: 'Machine Learning Lead – Code',
+    role: 'Machine Learning Lead',
     org: 'CEAM — Center of Excellence in Autonomous Mobility',
     logo: './images/experience/ceam.jpeg',
     location: 'Bengaluru, India',
     period: 'Aug 2025 – Aug 2026',
+    codeUrl: 'https://github.com/voyager2005',
+    doiUrl: 'https://doi.org/10.5281/zenodo.22018680',
     points: [
       'Led a 16-member computer vision team developing Project MAVERIC, an autonomous perception stack for real-time robotic navigation.',
       'Engineered high-performance perception pipelines using optimized C++ (Eigen) and NumPy, delivering real-time semantic segmentation (56 Hz) and object detection (16 FPS).',
@@ -215,6 +219,7 @@ export const projects = [
   {
     title: 'Sensera',
     description: 'A privacy-first, offline-first personal health record system decoupling machine learning pipelines and using patient-owned Google Drive storage under an app-scoped grant.',
+    githubUrl: 'https://github.com/voyager2005',
     doiUrl: 'https://doi.org/10.5281/zenodo.22013979',
   },
   {
@@ -225,6 +230,7 @@ export const projects = [
   {
     title: 'MAVERIC',
     description: 'Autonomous vehicle sensor fusion and 3D object tracking pipeline utilizing TensorRT acceleration and deterministic geometric physics.',
+    githubUrl: 'https://github.com/voyager2005',
     doiUrl: 'https://doi.org/10.5281/zenodo.22018682',
   },
 ]
