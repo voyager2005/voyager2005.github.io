@@ -406,11 +406,15 @@
   font-size: 1.05rem;
   line-height: 1.35;
   margin-bottom: 0.35rem;
-  color: var(--link);
+  color: var(--text);
   text-decoration: none;
 }
 
-.paper-card .paper-title:hover {
+.paper-card a.paper-title {
+  color: var(--link);
+}
+
+.paper-card a.paper-title:hover {
   color: var(--link-hover);
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -466,7 +470,7 @@
   }
 }
 
-.paper-card .paper-title:hover {
+.paper-card a.paper-title:hover {
   color: var(--link-hover);
   text-decoration: underline;
   text-underline-offset: 2px;

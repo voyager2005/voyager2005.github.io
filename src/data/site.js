@@ -106,7 +106,7 @@ export const publicationsConfig = {
 export const publications = [
   {
     title: 'Unsupervised Anatomical Feature Learning via Denoising Diffusion Probabilistic Models',
-    thumb: './images/publications/diffusion.svg',
+    thumb: './images/publications/diffusion.png',
     authors: 'G. Akshat, S. Bhatnagar, S. Ankalaki, T. K. Mishra',
     venue: 'Submitted to IEEE Access (Under peer review at IEEE Transactions on Medical Imaging), 2026',
     blurb: 'We propose using DDPM pretraining on unlabeled abdominal CT scans (BTCV dataset) to learn robust anatomical priors, showing that diffusion encoders retain over 80% of fully-supervised performance with only 10% of labels.',
@@ -122,7 +122,7 @@ export const publications = [
   },
   {
     title: 'Data-Centric Polyp Segmentation for Colorectal Cancer Detection',
-    thumb: './images/publications/polyp_seg.svg',
+    thumb: './images/publications/polyp_seg.png',
     authors: 'G. Akshat, R. R',
     venue: 'Submitted, 2025',
     blurb: 'We engineer a data-centric preprocessing pipeline with enhanced ground-truth labels and a deep learning model for polyp segmentation, achieving a Dice score of 0.9525.',
@@ -130,7 +130,7 @@ export const publications = [
   },
   {
     title: 'Nucleus Segmentation in H&E-Stained Histopathology Images',
-    thumb: './images/publications/nucleus.svg',
+    thumb: './images/publications/nucleus.png',
     authors: 'G. Akshat, T. K. Mishra',
     venue: 'SAGE Digital Health, 2025 (Accepted, awaiting publication)',
     blurb: 'We present a comparative analysis of deep learning architectures on the MoNuSeg dataset, achieving competitive results for nuclear segmentation in clinical tissue samples.',
@@ -138,7 +138,7 @@ export const publications = [
   },
   {
     title: 'Semi-Supervised Learning on Constrained Datasets',
-    thumb: './images/publications/semi_supervised.svg',
+    thumb: './images/publications/semi_supervised.png',
     authors: 'G. Akshat, R. R, G. Surathkal',
     venue: 'Submitted, 2025',
     blurb: 'We design an adaptive confidence-thresholding strategy based on pixel-wise uncertainty to stabilize attention U-Net training under extreme label scarcity (50 labeled samples).',
@@ -146,7 +146,7 @@ export const publications = [
   },
   {
     title: 'Segmenting Lung Regions for TB Detection',
-    thumb: './images/publications/lung_seg.svg',
+    thumb: './images/publications/lung_seg.png',
     authors: 'G. Akshat, R. R',
     venue: 'Presented at CVIP 2025; awaiting publication',
     blurb: 'Different U-Net encoder blocks have their own function; we benchmarked when to use what type of U-Net.',
