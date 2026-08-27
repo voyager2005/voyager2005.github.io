@@ -74,7 +74,7 @@ export const experience = [
 ]
 
 export const skills = [
-  { tag: 'programming', items: 'Python, TypeScript / JavaScript, Java, C, SQL, Bash' },
+  { tag: 'programming', items: 'Python, TypeScript / JavaScript, Java, C, C++, SQL, Bash' },
   {
     tag: 'ml frameworks',
     items:
@@ -86,7 +86,7 @@ export const skills = [
       'Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Generative AI',
   },
   {
-    tag: 'ai/ml focus',
+    tag: 'llms & rag',
     items:
       'LLMs, Retrieval-Augmented Generation (RAG), Dense Retrieval, Semantic Search, Vector Embeddings, Transfer Learning, Fine-tuning',
   },
@@ -112,15 +112,17 @@ export const publications = [
     title: 'Unsupervised Anatomical Feature Learning via Denoising Diffusion Probabilistic Models',
     thumb: './images/publications/diffusion.png',
     authors: 'G. Akshat, S. Bhatnagar, S. Ankalaki, T. K. Mishra',
-    venue: 'Submitted to IEEE Access (Under peer review at IEEE Transactions on Medical Imaging), 2026',
+    venue: 'Submitted to IEEE Access, under peer review',
     blurb: 'We propose using DDPM pretraining on unlabeled abdominal CT scans (BTCV dataset) to learn robust anatomical priors, showing that diffusion encoders retain over 80% of fully-supervised performance with only 10% of labels.',
-    links: [],
+    links: [
+      { label: 'arXiv', href: 'https://doi.org/10.48550/arXiv.2608.25693' }
+    ],
   },
   {
     title: 'Quality-Controlled Synthetic Medical Data Generation',
     thumb: './images/publications/synthetic_gan.svg',
     authors: 'G. Akshat, R. R',
-    venue: 'Honors Thesis, Submitted, 2026',
+    venue: 'Honors Thesis; in preparation for journal publication',
     blurb: 'We develop a Teacher-Student semi-supervised framework using conditional GANs to synthesize high-quality lumbar spine MRI slices while filtering out synthetic noise through a novel quality assessment metric.',
     links: [],
   },
@@ -128,7 +130,7 @@ export const publications = [
     title: 'Data-Centric Polyp Segmentation for Colorectal Cancer Detection',
     thumb: './images/publications/polyp_seg.png',
     authors: 'G. Akshat, R. R',
-    venue: 'Submitted, 2025',
+    venue: 'Under peer review, Scientific Reports',
     blurb: 'We engineer a data-centric preprocessing pipeline with enhanced ground-truth labels and a deep learning model for polyp segmentation, achieving a Dice score of 0.9525.',
     links: [],
   },
@@ -136,7 +138,7 @@ export const publications = [
     title: 'Nucleus Segmentation in H&E-Stained Histopathology Images',
     thumb: './images/publications/nucleus.png',
     authors: 'G. Akshat, T. K. Mishra',
-    venue: 'SAGE Digital Health, 2025 (Accepted, awaiting publication)',
+    venue: 'SAGE Digital Health (Accepted, awaiting publication)',
     blurb: 'We present a comparative analysis of deep learning architectures on the MoNuSeg dataset, achieving competitive results for nuclear segmentation in clinical tissue samples.',
     links: [],
   },
@@ -144,7 +146,7 @@ export const publications = [
     title: 'Semi-Supervised Learning on Constrained Datasets',
     thumb: './images/publications/semi_supervised.png',
     authors: 'G. Akshat, R. R, G. Surathkal',
-    venue: 'Submitted, 2025',
+    venue: 'Manuscript in preparation',
     blurb: 'We design an adaptive confidence-thresholding strategy based on pixel-wise uncertainty to stabilize attention U-Net training under extreme label scarcity (50 labeled samples).',
     links: [],
   },
@@ -152,7 +154,7 @@ export const publications = [
     title: 'Segmenting Lung Regions for TB Detection',
     thumb: './images/publications/lung_seg.png',
     authors: 'G. Akshat, R. R',
-    venue: 'Presented at CVIP 2025; awaiting publication',
+    venue: 'Accepted and published at CVIP 2025; awaiting publication in Springer CCIS book series',
     blurb: 'Different U-Net encoder blocks have their own function; we benchmarked when to use what type of U-Net.',
     links: [],
   },
@@ -217,20 +219,8 @@ export const projects = [
     githubUrl: 'https://github.com/voyager2005/an-atom',
   },
   {
-    title: 'Sensera',
-    description: 'A privacy-first, offline-first personal health record system decoupling machine learning pipelines and using patient-owned Google Drive storage under an app-scoped grant.',
-    githubUrl: 'https://github.com/voyager2005',
-    doiUrl: 'https://doi.org/10.5281/zenodo.22013979',
-  },
-  {
     title: 'Structure-Preserving Stain Transfer',
     description: 'A technical implementation of Vahadane et al. structure-preserving stain transfer for digital histopathology images to reduce color variations.',
     doiUrl: 'https://doi.org/10.5281/zenodo.22092812',
-  },
-  {
-    title: 'MAVERIC',
-    description: 'Autonomous vehicle sensor fusion and 3D object tracking pipeline utilizing TensorRT acceleration and deterministic geometric physics.',
-    githubUrl: 'https://github.com/voyager2005/maveric-perception-stack',
-    doiUrl: 'https://doi.org/10.5281/zenodo.22018682',
   },
 ]
