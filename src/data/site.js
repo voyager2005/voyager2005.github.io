@@ -34,11 +34,13 @@ export const experience = [
     org: 'Shell India Markets Private Limited',
     logo: './images/experience/shell.svg',
     location: 'Bengaluru, India',
-    period: 'Jun 2026 – Present',
+    period: 'Jun 2026 – Aug 2026',
     points: [
-      'Designed HiME, a hierarchical multilabel classifier for gear failure analysis, achieving 100% hierarchy consistency and 90% expert accuracy by enforcing hierarchical constraints during training rather than post-processing.',
-      'Developed a modular inference framework that decoupled feature extraction from hierarchical classification, accelerating experimentation with multiple vision backbones.',
-      'Deployed an automated gear failure assessment system that reduced manual report generation, letting domain experts focus on high-value human-in-the-loop annotation and validation.',
+      'Designed and trained HiME (Hierarchical Multi-label Estimator), a custom neural network architecture for hierarchical gear defect classification, achieving 100% hierarchy consistency.',
+      'Built a standalone desktop application that runs the entire pipeline locally on client PCs: from AI defect inspection and human-in-the-loop corrections to unstructured-to-structured data conversion and automated report generation.',
+      'Integrated a fine-tuned instruct LLM to draft diagnostic write-ups, automatically filling and exporting custom report templates to ship directly to downstream teams.',
+      'Owned the end-to-end MLOps pipeline (scoping, data engineering, modeling, and deployment) optimized for CPU edge compute, achieving sub-second inference latency and embedded logging.',
+      'Engineered monitoring, fine-tuning scripts, and retraining pipelines; leveraged a model-centric approach to manage initial data scarcity while curating a larger dataset to support future automation.',
     ],
   },
   {
